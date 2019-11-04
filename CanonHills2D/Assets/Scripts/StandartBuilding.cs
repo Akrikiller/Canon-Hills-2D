@@ -10,9 +10,9 @@ public class StandartBuilding : MonoBehaviour
 	private int currentLvl;
 	private int maxLvl;
 	public enum BuildingType{TOWER, WALL, ECO};
-	private BuildingType buildingType;
-	public int currentHp = 1000;
-	public int maxHp = 1000;
+	public BuildingType buildingType;
+	public int currentHp;
+	public int maxHp;
 
 	public StandartBuilding(string id, string name, int currentLvl, int maxLvl, BuildingType buildingType){
 		this.id = id;

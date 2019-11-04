@@ -9,13 +9,16 @@ public class Tower : StandartBuilding
 	private Projectile projectile = Projectile.STANDART_PROJECTILE;
 
 	public Tower(string id, string name, int currentLvl, int maxLvl): base(id, name,currentLvl, maxLvl,BuildingType.TOWER) {
-    
+
 }
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHp =1000;
+    	currentHp =1000;
+    maxHp = 1000;
+
+        Debug.Log(currentHp+"  "+ buildingType);
     }
 
     // Update is called once per frame
@@ -23,7 +26,7 @@ public class Tower : StandartBuilding
     {
         currentHp--;
         Slider healthSlider = GameObject.Find("healthSlider").GetComponent<Slider>(); 
-    	healthSlider.value = currentHp;
+    	healthSlider.value = maxHp-currentHp;
 
     }
 }
